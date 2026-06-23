@@ -1,0 +1,14 @@
+services:
+
+  web:
+    image: nginx
+    ports:
+      - "8180:80"
+
+  redis:
+    image: redis
+    volumes:
+      - redis_data:/data
+
+volumes:
+  redis_data:
