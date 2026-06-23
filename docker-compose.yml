@@ -1,7 +1,7 @@
 services:
 
   web:
-    image: nginx
+    build: .
     ports:
       - "8180:80"
 
