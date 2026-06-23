@@ -1,4 +1,4 @@
-FROM nginx
+FROM nginxssss
 
 COPY index.html /usr/share/nginx/html/index.html
 
