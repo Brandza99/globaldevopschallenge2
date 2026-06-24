@@ -16,8 +16,8 @@ jobs:
       - name: Login to Docker Hub
         uses: docker/login-action@v4
         with:
-          username: ${{ secrets.brandza99 }}
-          password: ${{ secrets.dckr_pat_h4Le6aZmRztQvDiYgusurU_a2_w }}
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v6
@@ -25,5 +25,5 @@ jobs:
           context: .
           push: true
           tags: |
-            ${{ secrets.brandza99 }}/globaldevopschallenge2:latest
-            ${{ secrets.dckr_pat_h4Le6aZmRztQvDiYgusurU_a2_w }}/globaldevopschallenge2:v2
+            ${{ secrets.DOCKERHUB_USERNAME }}/globaldevopschallenge2:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/globaldevopschallenge2:v2
